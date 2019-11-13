@@ -1,0 +1,212 @@
+body{
+	font-family: 'Arial';
+	background-color: #E0F8F7;
+	padding: 0px;
+	margin: 0px;
+}
+
+label {
+	font-family: "Arial";
+	font-size: 30px;
+	text-shadow: -2px 2px lightgray;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-bottom: 1px solid lightblue;
+	border-right: 1px solid lightblue;
+	border-left: 1px solid lightblue;
+	border-radius: 14px;
+}
+h1 {
+	font-size: 30px;
+}
+a:hover {
+	background-color: #08088A;
+	border-bottom: 1px solid blue;
+	border-right: 1px solid blue;
+	border-left: 1px solid blue;
+}
+
+a:active {
+	background-color: #0A0A2A;
+	border-bottom: 1px solid #0B0B61;
+	border-right: 1px solid #0B0B61;
+	border-left: 1px solid #0B0B61;
+}
+
+header{
+	width: 100%;
+	height: 60px;
+	background-color: #0B0B61;
+	color:white;
+}
+
+header a{
+	width: 50px;
+	margin-left: none;
+	display: inline-block;
+	float: left;
+	
+}
+
+header a img{
+	
+	width: 100%;
+}
+
+section{
+	background-color: #FFF;
+	width: 80%;
+	border: 1px solid #DDD;
+	border-radius: 14px;
+	padding: 2%;
+	margin: 10px 100px 10px 100px;	
+	box-shadow: -3px 1px 3px 1px rgba(0,0,0,0.24);
+}
+
+#titles td {
+	border-bottom: 1px solid;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+}
+#opc td {
+	border-bottom: 1px solid;
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+}
+#opc1 td {
+	
+	border-bottom: 1px solid;
+	border-right: 1px solid lightgray;
+}
+#txt {
+	border-bottom: 2px solid lightblue;
+	border-top: none;
+	border-left: 1px solid lightblue;
+	border-right: 1px solid lightblue;
+	margin: 2px 2px 2px 5px;
+	width: 90%;
+	background-color: #E0F8F7;
+}
+#btn {
+	font-size: 18px;
+	border: 1px solid lightblue;
+	border-radius: 14px;
+	background-color: #FFF;
+	margin: 0px 0px 0px 10px;
+	color: blue;
+}
+#btn:hover {
+	border: 1px solid blue;
+	border-radius: 14px;
+	background-color: lightblue;
+	color: white;
+}
+#btn:active {
+	border: 1px solid blue;
+	border-radius: 14px;
+	background-color: blue;
+	color: white;	
+}
+
+#inicio {
+	width: 60px;
+	padding-left: 20px;
+	padding-right: 25px;
+	padding-top: 18px;
+	padding-bottom: 16px;
+	margin: 0 10px 0 10px;
+}
+#ultimas {
+	width: 105px;
+	padding-left: 10px;
+	padding-top: 7px;
+	padding-bottom: 4px;
+	margin: 0 10px 0 10px;
+}
+#agregar {
+	width: 110px;
+	padding-left: 15px;
+	padding-top: 18px;
+	padding-bottom: 16px;
+	margin: 0 10px 0 10px;
+}
+#modificar {
+	width: 115px; 
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 18px;
+	padding-bottom: 16px;
+	margin: 0 10px 0 10px;
+}
+#cerrar {
+	width: 60px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 18px;
+	padding-bottom: 16px;
+	margin: 0 10px 0 10px;	
+}
+#titulo {
+	font-size: 50px;
+	text-shadow: -2px 2px lightgray;
+}
+#nombre {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding-top: 15px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #DDD;
+	width: 400px;
+}
+#descripcion {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding-top: 15px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #DDD;
+	width: 400px;
+}
+#precio{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding-top: 15px;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: 1px solid #DDD;
+	width: 400px;
+}
+
+#categorias {
+	font-size: 20px;
+	width: 400px;
+	height: 30px;
+	border-radius: 14px;
+}
+
+#aceptar {
+	
+	padding: 10px 50px;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	color: #FFF;
+	background-color: #08088A;
+	border-radius: 15px;
+}
+#aceptar:hover {
+	background-color: #0101DF;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 10px 30px 0 rgba(0,0,0,0.19);
+}
+#aceptar:active {
+	background-color: #0B0B61;
+}
