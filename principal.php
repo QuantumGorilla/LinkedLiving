@@ -3,9 +3,16 @@
 <head>
 	<title>LinkedLiving</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" a href="css\estiloPrincipal.css">
 </head>
 <body>
-	<img src="imagenes/Logo.png"/>
+    <form id="formulario" method="post" action="./admin.php">
+        <input type="submit" type="submit" value="Administrador" class="admin"/>
+    </form>
+    <form id="formulario" method="post" action="./index.php">
+        <input type="submit" type="submit" value="Usuario" class="index"/>
+    </form>
+	<img src="imagenes/Logo2.png"/>
     <h1> Información de los desarrolladores</h1>
     <li>Santiago Zuñiga Navarro: Estudiante de sexto semestre de ingeniería de sistemas y ciencias de la computación en la Universidad del Norte</li>
     <li>Andres Betancourt Vega: Estudiante de sexto semestre de ingeniería de sistemas y ciencias de la computación en la Universidad del Norte.</li>

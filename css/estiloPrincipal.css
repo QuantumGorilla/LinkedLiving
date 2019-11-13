@@ -1,0 +1,52 @@
+body{
+	margin: 0 auto;
+	background-image: url("../imagenes/Background3.png");
+	background-repeat: no-repeat;
+	background-size: 100% 720px;
+}
+
+img{
+    display: block;
+    margin: auto;
+    backface-visibility: hidden;
+}
+
+h1{
+    align-content: center;
+    font: "Times New Roman";
+    font-size: 20px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+li{
+    align-content: center;
+    font: "Times New Roman";
+    font: 10px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+h2{
+    align-content: center;
+    font: "Times New Roman";
+    font: 20px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+p{
+    align-content: center;
+    font: "Times New Roman";
+    font: 10px;
+    color: antiquewhite;
+    text-align: center;
+}
+
+h3{
+    align-content: center;
+    font: "Times New Roman";
+    font: 20px;
+    color: antiquewhite;
+    text-align: center;
+}
