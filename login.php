@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8"/>
-	<title>Panel de Administración</title>
-	<link rel="stylesheet" type="text/css" href="./css/Login.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<title>LinkedLiving</title>
+	<link rel="stylesheet" a href="css\Login.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript"  href="./js/scripts.js"></script>
 </head>
 <body>
-	<section>
-		<center>
-			<form id="formulario" method="post" action="./login/verificar.php">
-				<label id="titulo">Administración</label><br><br><br>
-				<label for="usuario">Nombre de usuario: </label><br><br>
-				<input type="text" id="usuario" name="Usuario" placeholder="Digite su nombre de usuario..." ><br><br><br>
-				<label for="password">Contraseña: </label><br><br>
-				<input type="password" id="password" name="Password" placeholder="Digite su contraseña..." ><br><br><br><br>
-				<input type="submit" id="aceptar" value="ACEPTAR" class="aceptar">
-				<?php
-					if(isset($_GET['error'])){
-						echo '<br><br><span id="error">¡LOS DATOS INGRESADOS SON INCORRECTOS!</span>';
-
-					}
-				?>
-			</form>
-		</center>
-	</section>
+	<div class="container">
+	<img src="imagenes/Avatar.png"/>
+		<form>
+		<div class="form-input">
+		<input type="text" name="text" placeholder="Nombre de usuario"/>	
+		</div>
+		<div class="form-input">
+		<input type="password" name="password" placeholder="Contraseña"/>
+		</div>
+		<input type="submit" type="submit" value="Entrar" class="btn-login"/>
+        <?php
+            if(isset($_GET['error'])){
+                echo '<br><br><span id="error">Nombre de usuario y/o contraseña incorrectos.</span>';
+            }
+        ?>
+		</form>
+	</div>
 </body>
 </html>
+

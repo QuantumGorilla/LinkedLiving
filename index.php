@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title> Linked Living </title>
-	<link rel="stylesheet" type=<text/css href="Login.css"
+	<title>LinkedLiving</title>
+	<link rel="stylesheet" a href="css\Login.css">
 </head>
-	<body>
-		<div class="login-box"
-		<img src="./imagenes/Background.jpg" class="avatar">
-<h1> LinkedLiving </h1>
-<form>
-	<p>Username</p>
-	<input type="text" name="Username" placeholder="Nombre de usuario">
-	<p> password </p>
-	<input type="password" name="password" placeholder="Contraseña">
-	<input type="submit" name="submit" value="Entrar">
-	<a href="#">Olvido su contraseña</a>
-</form>
+<body>
+	<div class="container">
+	<img src="imagenes/Avatar.png"/>
+		<form>
+		<div class="form-input">
+		<input type="text" name="text" placeholder="Nombre de usuario"/>	
+		</div>
+		<div class="form-input">
+		<input type="password" name="password" placeholder="Contraseña"/>
+		</div>
+		<input type="submit" type="submit" value="Entrar" class="btn-login"/>
+		</form>
 	</div>
+</body>
 </html>
