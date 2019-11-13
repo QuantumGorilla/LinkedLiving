@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "conexion.php";
-$re=mysqli_query($obj_conexion,"select * from cliente where usuario='".$_POST['Usuario']."' AND 
+$re=mysqli_query($obj_conexion,"select * from usuarios where usuario='".$_POST['Usuario']."' AND 
  					contrasena='".$_POST['Password']."'")	or die(mysqli_error($obj_conexion));
 	while ($f=mysqli_fetch_array($re)) {
 		$arreglo[]=array('Nombre'=>$f['nombre']);

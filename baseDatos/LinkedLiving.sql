@@ -2,8 +2,8 @@
 -- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 13-11-2019 a las 06:29:28
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-11-2019 a las 21:56:41
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -19,16 +19,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `LinkedLiving`
+-- Base de datos: `linkedliving`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Acuerdos`
+-- Estructura de tabla para la tabla `acuerdos`
 --
 
-CREATE TABLE `Acuerdos` (
+CREATE TABLE `acuerdos` (
   `IdAcuerdo` int(4) NOT NULL,
   `IdArrendatario` int(4) NOT NULL,
   `IdEstudiante` int(4) NOT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `Acuerdos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Administradores`
+-- Estructura de tabla para la tabla `administradores`
 --
 
-CREATE TABLE `Administradores` (
+CREATE TABLE `administradores` (
   `IdAdmin` int(4) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Apellido` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -53,10 +53,10 @@ CREATE TABLE `Administradores` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Arredantarios`
+-- Estructura de tabla para la tabla `arredantarios`
 --
 
-CREATE TABLE `Arredantarios` (
+CREATE TABLE `arredantarios` (
   `IdArrendatario` int(4) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Apellidos` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -67,10 +67,10 @@ CREATE TABLE `Arredantarios` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Estudiante`
+-- Estructura de tabla para la tabla `estudiante`
 --
 
-CREATE TABLE `Estudiante` (
+CREATE TABLE `estudiante` (
   `IdEstudiante` int(4) NOT NULL,
   `Universidad` int(4) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -82,10 +82,10 @@ CREATE TABLE `Estudiante` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Habitaciones`
+-- Estructura de tabla para la tabla `habitaciones`
 --
 
-CREATE TABLE `Habitaciones` (
+CREATE TABLE `habitaciones` (
   `IdHabitacion` int(4) NOT NULL,
   `Hospedaje` int(4) NOT NULL,
   `NumberRoom` int(4) NOT NULL,
@@ -95,10 +95,10 @@ CREATE TABLE `Habitaciones` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Hospedajes`
+-- Estructura de tabla para la tabla `hospedajes`
 --
 
-CREATE TABLE `Hospedajes` (
+CREATE TABLE `hospedajes` (
   `IdHospedaje` int(4) NOT NULL,
   `Arrendatario` int(4) NOT NULL,
   `Location` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -110,10 +110,10 @@ CREATE TABLE `Hospedajes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Locations`
+-- Estructura de tabla para la tabla `locations`
 --
 
-CREATE TABLE `Locations` (
+CREATE TABLE `locations` (
   `IdLocation` int(4) NOT NULL,
   `Sector` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -121,10 +121,10 @@ CREATE TABLE `Locations` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Universidades`
+-- Estructura de tabla para la tabla `universidades`
 --
 
-CREATE TABLE `Universidades` (
+CREATE TABLE `universidades` (
   `IdUniversidad` int(4) NOT NULL,
   `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
   `Location` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
@@ -134,10 +134,23 @@ CREATE TABLE `Universidades` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Volantes`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `Volantes` (
+CREATE TABLE `usuarios` (
+  `Id` int(11) NOT NULL,
+  `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `Usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `Contrasena` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `volantes`
+--
+
+CREATE TABLE `volantes` (
   `IdVolante` int(4) NOT NULL,
   `TipoAcuerdo` int(20) NOT NULL,
   `Valor` int(40) NOT NULL,
@@ -151,57 +164,63 @@ CREATE TABLE `Volantes` (
 --
 
 --
--- Indices de la tabla `Acuerdos`
+-- Indices de la tabla `acuerdos`
 --
-ALTER TABLE `Acuerdos`
+ALTER TABLE `acuerdos`
   ADD PRIMARY KEY (`IdAcuerdo`);
 
 --
--- Indices de la tabla `Administradores`
+-- Indices de la tabla `administradores`
 --
-ALTER TABLE `Administradores`
+ALTER TABLE `administradores`
   ADD PRIMARY KEY (`IdAdmin`);
 
 --
--- Indices de la tabla `Arredantarios`
+-- Indices de la tabla `arredantarios`
 --
-ALTER TABLE `Arredantarios`
+ALTER TABLE `arredantarios`
   ADD PRIMARY KEY (`IdArrendatario`);
 
 --
--- Indices de la tabla `Estudiante`
+-- Indices de la tabla `estudiante`
 --
-ALTER TABLE `Estudiante`
+ALTER TABLE `estudiante`
   ADD PRIMARY KEY (`IdEstudiante`);
 
 --
--- Indices de la tabla `Habitaciones`
+-- Indices de la tabla `habitaciones`
 --
-ALTER TABLE `Habitaciones`
+ALTER TABLE `habitaciones`
   ADD PRIMARY KEY (`IdHabitacion`);
 
 --
--- Indices de la tabla `Hospedajes`
+-- Indices de la tabla `hospedajes`
 --
-ALTER TABLE `Hospedajes`
+ALTER TABLE `hospedajes`
   ADD PRIMARY KEY (`IdHospedaje`);
 
 --
--- Indices de la tabla `Locations`
+-- Indices de la tabla `locations`
 --
-ALTER TABLE `Locations`
+ALTER TABLE `locations`
   ADD PRIMARY KEY (`IdLocation`);
 
 --
--- Indices de la tabla `Universidades`
+-- Indices de la tabla `universidades`
 --
-ALTER TABLE `Universidades`
+ALTER TABLE `universidades`
   ADD PRIMARY KEY (`IdUniversidad`);
 
 --
--- Indices de la tabla `Volantes`
+-- Indices de la tabla `usuarios`
 --
-ALTER TABLE `Volantes`
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indices de la tabla `volantes`
+--
+ALTER TABLE `volantes`
   ADD PRIMARY KEY (`IdVolante`);
 
 --
@@ -209,57 +228,63 @@ ALTER TABLE `Volantes`
 --
 
 --
--- AUTO_INCREMENT de la tabla `Acuerdos`
+-- AUTO_INCREMENT de la tabla `acuerdos`
 --
-ALTER TABLE `Acuerdos`
+ALTER TABLE `acuerdos`
   MODIFY `IdAcuerdo` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Administradores`
+-- AUTO_INCREMENT de la tabla `administradores`
 --
-ALTER TABLE `Administradores`
+ALTER TABLE `administradores`
   MODIFY `IdAdmin` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Arredantarios`
+-- AUTO_INCREMENT de la tabla `arredantarios`
 --
-ALTER TABLE `Arredantarios`
+ALTER TABLE `arredantarios`
   MODIFY `IdArrendatario` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Estudiante`
+-- AUTO_INCREMENT de la tabla `estudiante`
 --
-ALTER TABLE `Estudiante`
+ALTER TABLE `estudiante`
   MODIFY `IdEstudiante` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Habitaciones`
+-- AUTO_INCREMENT de la tabla `habitaciones`
 --
-ALTER TABLE `Habitaciones`
+ALTER TABLE `habitaciones`
   MODIFY `IdHabitacion` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Hospedajes`
+-- AUTO_INCREMENT de la tabla `hospedajes`
 --
-ALTER TABLE `Hospedajes`
+ALTER TABLE `hospedajes`
   MODIFY `IdHospedaje` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Locations`
+-- AUTO_INCREMENT de la tabla `locations`
 --
-ALTER TABLE `Locations`
+ALTER TABLE `locations`
   MODIFY `IdLocation` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Universidades`
+-- AUTO_INCREMENT de la tabla `universidades`
 --
-ALTER TABLE `Universidades`
+ALTER TABLE `universidades`
   MODIFY `IdUniversidad` int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Volantes`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `Volantes`
+ALTER TABLE `usuarios`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `volantes`
+--
+ALTER TABLE `volantes`
   MODIFY `IdVolante` int(4) NOT NULL AUTO_INCREMENT;
 COMMIT;
 

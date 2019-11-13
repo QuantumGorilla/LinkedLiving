@@ -88,11 +88,11 @@
     	<label id="titulo">REGISTRO</label><br><br>
     	<form method="POST" action="registro.php" >
         <label for="nombre">Nombres: </label><br>
-        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre..."><br><br><br>
+        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
         <label for="usuario">Nombre de usuario: </label><br>
-        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Escriba su nombre de usuario..."><br><br><br>
+        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Escriba su nombre de usuario"><br><br><br>
         <label for="contrasena">Contraseña: </label><br>
-        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Escriba su contraseña..."><br><br><br><br>
+        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Escriba su contraseña"><br><br><br><br>
         <input type="submit" id="botones" value="REGISTRO" class="btn btn-success" name="btn1"><br>
       </form>
     </center>
@@ -108,7 +108,7 @@
   		$contrasena=$_POST['contrasena'];
       if (strlen($nombre)*strlen($usuario)*strlen($contrasena)) {
 
-        mysqli_query($conexion,"INSERT INTO $tabla_db1 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
+        mysqli_query($conexion,"INSERT INTO $tabla_db8 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
 
         include("cerrar_conexion.php");
         echo "ya agrego"; 
