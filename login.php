@@ -13,6 +13,7 @@
     </form>
 	<div class="container">
 		<img src="imagenes/Avatar.png"/>
+		<h2 style="color:white">Usuario</h2>	
 		<form>
 			<div class="form-input">
 				<input type="text" name="text" placeholder="Usuario"/>	
@@ -22,7 +23,7 @@
 			</div>
 		</form>
 		<br></br>
-		<form id="botones" method="post" action="./verificarCliente.php">
+		<form id="botones" method="post" action="./verificarUsuarios.php">
 			<input type="submit" type="submit" value="ENTRAR"/> 
 		</form>
 		<br></br>

@@ -4,7 +4,7 @@ session_start();
 	if(isset($_SESSION['Usuario'])){
 
 	}else{
-		header("Location: ./login.php?Error=Acceso denegado");
+		header("Location: ./loginadmin.php");
 	}
 ?>
 <!DOCTYPE html>

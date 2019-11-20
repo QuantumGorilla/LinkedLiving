@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-11-2019 a las 21:56:41
+-- Tiempo de generación: 20-11-2019 a las 16:38:37
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.3.11
 
@@ -39,6 +39,29 @@ CREATE TABLE `acuerdos` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `admin`
+--
+
+CREATE TABLE `admin` (
+  `IdAdmin` int(4) NOT NULL,
+  `Nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Usuario` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `Contrasena` varchar(100) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `admin`
+--
+
+INSERT INTO `admin` (`IdAdmin`, `Nombre`, `Usuario`, `Contrasena`) VALUES
+(1, 'Alejandro', 'Ale', '1234'),
+(2, 'Santi', 'Santi', '1234'),
+(3, 'Andres', 'Andres', '1234'),
+(4, 'Carla', 'Krla', '1234');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `administradores`
 --
 
@@ -49,6 +72,16 @@ CREATE TABLE `administradores` (
   `Celular` int(20) NOT NULL,
   `E-mail` varchar(20) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `administradores`
+--
+
+INSERT INTO `administradores` (`IdAdmin`, `Nombre`, `Apellido`, `Celular`, `E-mail`) VALUES
+(1, 'Alejandro', 'Manotas', 312285019, 'manotasja@uninorte.e'),
+(2, 'Santiago', 'Zuñiga', 32222222, 'sazuñiga@uninorte.ed'),
+(3, 'Andres', 'Betancourt', 386868686, 'andresbetancourt@uni'),
+(4, 'Carla', 'Duran', 329393939, 'cmariota@uninorte.ed');
 
 -- --------------------------------------------------------
 
@@ -137,7 +170,22 @@ CREATE TABLE `universidades` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `linkedliving`.`usuarios` ( `ID` INT NOT NULL , `Nombre` VARCHAR NOT NULL , `Usuario` VARCHAR NOT NULL , `Contraseña` VARCHAR NOT NULL ) ENGINE = InnoDB;;
+CREATE TABLE `usuarios` (
+  `Id` int(11) NOT NULL,
+  `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `Usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `Contrasena` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`Id`, `Nombre`, `Usuario`, `Contrasena`) VALUES
+(1, 'Alejandro', 'Johnny Test', '1234'),
+(2, 'Ale', 'Ale', 'Ale'),
+(3, 'alej', 'alej', '1234'),
+(4, 'santi', 'santi', 'santi');
 
 -- --------------------------------------------------------
 
@@ -163,6 +211,12 @@ CREATE TABLE `volantes` (
 --
 ALTER TABLE `acuerdos`
   ADD PRIMARY KEY (`IdAcuerdo`);
+
+--
+-- Indices de la tabla `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`IdAdmin`);
 
 --
 -- Indices de la tabla `administradores`
@@ -209,7 +263,8 @@ ALTER TABLE `universidades`
 --
 -- Indices de la tabla `usuarios`
 --
-ALTER TABLE `usuarios` ADD PRIMARY KEY( `ID`);
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indices de la tabla `volantes`
@@ -228,10 +283,16 @@ ALTER TABLE `acuerdos`
   MODIFY `IdAcuerdo` int(4) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `IdAdmin` int(4) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `administradores`
 --
 ALTER TABLE `administradores`
-  MODIFY `IdAdmin` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdAdmin` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `arredantarios`
@@ -273,7 +334,7 @@ ALTER TABLE `universidades`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `volantes`
