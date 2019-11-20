@@ -136,5 +136,27 @@ session_start();
      <p> Si desea inscribir una institución de educación superior, contacte con soporte. <br> Tel: 3506995 </p>
 	</form>	</center>
 	</section>
+    <?
+         if(isset($_POST['btn1']))
+  	{
+  		include("abrir_conexion.php");
+
+  		
+  		$nombre=$_POST['nombre'];
+  		$apellidos=$_POST['apellido'];
+  		$celular=$_POST['celular'];
+      $email=$_POST['e-mail'];
+      if (strlen($nombre)*strlen($apellido)*strlen($celular)*strlen($email)) {
+
+        mysqli_query($conexion,"INSERT INTO $tabla_db2 (id,nombre,apellidos,celular,email) values ('','$nombre','$apellido','$celular', '$email')");
+
+        include("cerrar_conexion.php");
+        echo "ya agrego"; 
+        header('Location:../index.php');     
+      }else{
+        echo "Llene todo los campos"; 
+      }
+  	}
+  ?>
 </body>
 </html>

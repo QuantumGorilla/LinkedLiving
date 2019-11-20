@@ -6,9 +6,9 @@
 	$clavedb = "";    // sera el valor de nuestra BD 
 
 	//Lista de Tablas
-	$tabla_db1 = "usuarios"; 	   // tabla de usuarios
-	$tabla_db2 = "arrendatarios";  // tabla de arrendatarios
-	$tabla_db3 = "estudiantes";    // tabla de estudiantes
+	global $tabla_db1 = "usuarios"; 	   // tabla de usuarios
+	global $tabla_db2 = "arrendatarios";  // tabla de arrendatarios
+	global $tabla_db3 = "estudiante";    // tabla de estudiantes
 
 	error_reporting(1); //No me muestra errores
 	
