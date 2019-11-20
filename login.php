@@ -13,7 +13,7 @@
     </form>
 	<div class="container">
 		<img src="imagenes/Avatar.png"/>
-		<h2 style="color:white">Usuario</h2>	
+		<h2 style="color:white">Arrendatario</h2>	
 		<form>
 			<div class="form-input">
 				<input type="text" name="text" placeholder="Usuario"/>	
@@ -21,13 +21,12 @@
 			<div class="form-input">
 				<input type="password" name="password" placeholder="Contraseña"/>
 			</div>
-		</form>
-		<br></br>
 		<form id="botones" method="post" action="./verificarUsuarios.php">
 			<input type="submit" type="submit" value="ENTRAR"/> 
+		</form> 
 		</form>
 		<br></br>
-		<form id="formulario" method="post" action="./registrarse.php">
+		<form id="formulario" method="post" action="./registrarsea.php">
 			<input type="submit" id="registro" value="REGISTRARSE" class="registrarse">
 		</form>
        <?php

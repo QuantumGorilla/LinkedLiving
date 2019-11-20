@@ -81,21 +81,57 @@ session_start();
       border-bottom: 1px solid #DDD;
       width: 400px;
     }
+    #apellido{
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+      padding-top: 15px;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid #DDD;
+      width: 400px;
+    }
+    #celular{
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+      padding-top: 15px;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid #DDD;
+      width: 400px;
+    }
+    #e-mail{
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+      padding-top: 15px;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-bottom: 1px solid #DDD;
+      width: 400px;
+    }
   </style>
 </head>
 <body>
   <form action="login.php" method = "post">
       <input type="submit" type="submit" value="REGRESAR"/>
 	</form>
-  <section>
-	<center><form action="guardabasecliente.php" method = "post">
-	<label id="titulo">REGISTRO</label><br><br>
-	<label for="nombre">Nombres: </label><br>
-     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
+     <section>
+	   <center><form action="guardabaseUsuario.php" method = "post"><form action="guardaArrendatario.php" method = "post">
+	   <label id="titulo">REGISTRO</label><br><br>
      <label for="usuario">Nombre de usuario: </label><br>
      <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Escriba su nombre de usuario"><br><br><br>
      <label for="contrasena">Contraseña: </label><br>
      <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Escriba su contraseña"><br><br><br><br>
+     <label for="nombre">Nombre: </label><br>
+     <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
+     <label for="apellido">Apellido: </label><br>
+     <input type="text" name="apellido" class="form-control" id="apellido" placeholder="Escriba su primer apellido"><br><br><br>
+     <label for="celular">Celular: </label><br>
+     <input type="text" name="celular" class="form-control" id="celular" placeholder="Escriba su celular"><br><br><br>
+     <label for="e-mail">E-mail: </label><br>
+     <input type="text" name="e-mail" class="form-control" id="e-mail" placeholder="Escriba su e-mail"><br><br><br>
      <input type="submit" name="accion" value="ENVIAR" class="aceptar"><br>
      <p> Si desea inscribir una institución de educación superior, contacte con soporte. <br> Tel: 3506995 </p>
 	</form>	</center>

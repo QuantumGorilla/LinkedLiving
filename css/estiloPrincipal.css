@@ -55,9 +55,9 @@ h3{
     text-align: center;
 }
 section{
-    width: 50px;
-    height: 90px;
-    margin-left: 47%;
+    width: 0px;
+    height: 0px;
+    margin-left: 0%;
 }
 
 header{
@@ -65,4 +65,8 @@ header{
     height: 60px;
     background-color: #0B0B61;
     color:white;
+}
+
+.form-actions  {
+    text-align:center;
 }

@@ -7,7 +7,8 @@
 
 	//Lista de Tablas
 	$tabla_db1 = "usuarios"; 	   // tabla de usuarios
-	
+	$tabla_db2 = "arrendatarios";  // tabla de arrendatarios
+	$tabla_db3 = "estudiantes";    // tabla de estudiantes
 
 	error_reporting(1); //No me muestra errores
 	
@@ -15,7 +16,7 @@
 
 
 	if ($conexion->connect_errno) {
-	    echo "Nuestro sitio experimenta fallos....";
+	    echo "Nuestro sitio experimenta fallos...";
 	    exit();
 	}
 

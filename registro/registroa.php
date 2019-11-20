@@ -93,7 +93,7 @@ session_start();
     </form>
     <center>
     	<label id="titulo">REGISTRO</label><br><br>
-      <form action="guardabasecliente.php" method = "post">
+      <form action="guardaArrendatario.php" method = "post">
       <label for="nombre">Nombres: </label><br>
       <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
       <label for="usuario">Nombre de usuario: </label><br>
@@ -111,11 +111,12 @@ session_start();
 
   		
   		$nombre=$_POST['nombre'];
-  		$usuario=$_POST['usuario'];
-  		$contrasena=$_POST['contrasena'];
-      if (strlen($nombre)*strlen($usuario)*strlen($contrasena)) {
+  		$apellido=$_POST['apellido'];
+  		$celular=$_POST['celular'];
+      $email=$_POST['e-mail'];
+      if (strlen($nombre)*strlen($apellido)*strlen($celular)*strlen($email)) {
 
-        mysqli_query($conexion,"INSERT INTO $tabla_db1 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
+        mysqli_query($conexion,"INSERT INTO $tabla_db2 (id,nombre,apellido,celular,email) values ('','$nombre','$usuario','$contrasena')");
 
         include("cerrar_conexion.php");
         echo "ya agrego"; 

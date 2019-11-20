@@ -88,12 +88,12 @@ session_start();
 <body>
 <div class="row">
   <div class="col-md-4">
-    <form action="../login.php">
+    <form action="../logines.php">
       <input type="submit" id="botones" value="REGRESAR" class="btn btn-success" name="btn1">
     </form>
     <center>
     	<label id="titulo">REGISTRO</label><br><br>
-      <form action="guardabasecliente.php" method = "post">
+      <form action="guardaEstudiante.php" method = "post">
       <label for="nombre">Nombres: </label><br>
       <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
       <label for="usuario">Nombre de usuario: </label><br>
@@ -109,13 +109,14 @@ session_start();
   	{
   		include("abrir_conexion.php");
 
-  		
+  		$universidad=$_POST['universidad'];
   		$nombre=$_POST['nombre'];
-  		$usuario=$_POST['usuario'];
-  		$contrasena=$_POST['contrasena'];
-      if (strlen($nombre)*strlen($usuario)*strlen($contrasena)) {
+  		$apellido=$_POST['apellido'];
+  		$celular=$_POST['celular'];
+      $email=$_POST['e-mail'];
+      if (strlen($universidad)*strlen($nombre)*strlen($apellido)*strlen($celular)*strlen($email)) {
 
-        mysqli_query($conexion,"INSERT INTO $tabla_db1 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
+        mysqli_query($conexion,"INSERT INTO $tabla_db3 (id,universidad,nombre,apellido,celular,email) values ('','$universidad','$nombre','$apellido','$celular','$email')");
 
         include("cerrar_conexion.php");
         echo "ya agrego"; 

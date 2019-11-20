@@ -13,7 +13,7 @@
     </form>
 	<div class="container">
 		<img src="imagenes/Avatar.png"/>
-		<h2 style="color:white">Administrador</h2>
+		<h2 style="color:white">Estudiantes</h2>	
 		<form>
 			<div class="form-input">
 				<input type="text" name="text" placeholder="Usuario"/>	
@@ -21,11 +21,14 @@
 			<div class="form-input">
 				<input type="password" name="password" placeholder="Contraseña"/>
 			</div>
-		</form>
-		<form id="botones" method="post" action="./verificarAdmin.php">
+		<form id="botones" method="post" action="./verificarEstudiantes.php">
 			<input type="submit" type="submit" value="ENTRAR"/> 
+		</form> 
 		</form>
 		<br></br>
+		<form id="formulario" method="post" action="./registrarsee.php">
+			<input type="submit" id="registro" value="REGISTRARSE" class="registrarse">
+		</form>
        <?php
         if(isset($_GET['error'])){
             echo '<br><br><span id="error">Nombre de usuario y/o contraseña incorrectos.</span>';
@@ -35,4 +38,3 @@
 	</section>
 </body>
 </html>
-

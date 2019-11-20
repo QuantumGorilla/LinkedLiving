@@ -8,16 +8,19 @@
 <body>
     <img src="imagenes/Logo2.png"/>
     <img src="imagenes/publi2.png" style="float: right"/>
-    <img src="imagenes/publi3.png" style="float: left"/>
-    <section>      
-        <h2> Perfiles </h2>
-        <form id="formulario" method="post" action="./admin.php">
-            <input type="submit" type="submit" value="   ADMIN    " class="admin"/>
-        </form>
-        <form id="formulario" method="post" action="./login.php">
-            <input type="submit" type="submit" value="  USUARIO " class="index"/>
-        </form>
-    </section>
+    <img src="imagenes/publi3.png" style="float: left"/>   
+    <center>
+    <h2> Perfiles </h2>
+    <form id="formulario" method="post" action="./admin.php">
+    <input type="submit" type="submit" value="ADMINISTRADOR" class="admin"/>
+    </form>
+    <form id="formulario" method="post" action="./login.php">
+    <input type="submit" type="submit" value=" ARRENDATARIO " class="index"/>
+    </form>
+    <form id="formulario" method="post" action="./logines.php">
+    <input type="submit" type="submit" value="   ESTUDIANTE   " class="index"/>
+    </form>
+    </center>
     <h1></h1>
     <h2> Desarrolladores</h2>
     <p>Santiago Zuñiga Navarro: Estudiante de sexto semestre de ingeniería de sistemas y ciencias de la computación en la Universidad del Norte. <br></p>
