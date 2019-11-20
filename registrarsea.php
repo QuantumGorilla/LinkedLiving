@@ -139,7 +139,7 @@ session_start();
     <?
          if(isset($_POST['btn1']))
   	{
-  		include("abrir_conexion.php");
+  		include("abrir_conexionesa.php");
 
   		
   		$nombre=$_POST['nombre'];
