@@ -3,7 +3,7 @@ session_start();
 if(isset($_SESSION['usuario'])){
 
 }else{
-	header("Location: ./index.php?Error=Acceso denegado");
+	header("Location: ./login.php?Error=Acceso denegado");
 }
 ?>
 <!DOCTYPE html>

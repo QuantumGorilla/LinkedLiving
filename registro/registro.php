@@ -1,8 +1,15 @@
+<?php
+session_start();
+  include "conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <title>Registro</title>
   <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+  <script type="text/javascript" src="./js/jquery-1.10.2.js"></script>
+  <script type="text/javascript"  src="./js/scripts.js"></script>
   <style>
     body {
       background-color: #E0F8F7;
@@ -81,23 +88,23 @@
 <body>
 <div class="row">
   <div class="col-md-4">
-    <form action="../index.php">
+    <form action="../login.php">
       <input type="submit" id="botones" value="REGRESAR" class="btn btn-success" name="btn1">
     </form>
     <center>
     	<label id="titulo">REGISTRO</label><br><br>
-    	<form method="POST" action="registro.php" >
-        <label for="nombre">Nombres: </label><br>
-        <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
-        <label for="usuario">Nombre de usuario: </label><br>
-        <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Escriba su nombre de usuario"><br><br><br>
-        <label for="contrasena">Contraseña: </label><br>
-        <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Escriba su contraseña"><br><br><br><br>
-        <input type="submit" id="botones" value="REGISTRO" class="btn btn-success" name="btn1"><br>
+      <form action="guardabasecliente.php" method = "post">
+      <label for="nombre">Nombres: </label><br>
+      <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre"><br><br><br>
+      <label for="usuario">Nombre de usuario: </label><br>
+      <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Escriba su nombre de usuario"><br><br><br>
+      <label for="contrasena">Contraseña: </label><br>
+      <input type="password" name="contrasena" class="form-control" id="contrasena" placeholder="Escriba su contraseña"><br><br><br><br>
+      <input type="submit" name="accion" value="ENVIAR" class="aceptar"><br>
+      <p> Si desea inscribir una institución de educación superior, contacte con soporte. <br> Tel: 3506995 </p>
       </form>
     </center>
-
-  <?php
+      <?php
   	if(isset($_POST['btn1']))
   	{
   		include("abrir_conexion.php");
@@ -108,7 +115,7 @@
   		$contrasena=$_POST['contrasena'];
       if (strlen($nombre)*strlen($usuario)*strlen($contrasena)) {
 
-        mysqli_query($conexion,"INSERT INTO $tabla_db8 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
+        mysqli_query($conexion,"INSERT INTO $tabla_db1 (id,nombre,usuario,contrasena) values ('','$nombre','$usuario','$contrasena')");
 
         include("cerrar_conexion.php");
         echo "ya agrego"; 
@@ -124,16 +131,8 @@
 
   	}
   ?>
-
-
-
   </div>
   <div class="col-md-4"></div>
 </div>
-
-
-
-  
-  
 </body>
 </html>

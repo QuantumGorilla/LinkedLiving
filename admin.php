@@ -4,7 +4,7 @@ session_start();
 	if(isset($_SESSION['Usuario'])){
 
 	}else{
-		header("Location: ./index.php?Error=Acceso denegado");
+		header("Location: ./login.php?Error=Acceso denegado");
 	}
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ session_start();
 </head>
 <body>
 	<header>
-		<a id="inicio" href="index.php">Inicio</a>
+		<a id="inicio" href="login.php">Inicio</a>
 		<a id="agregar" href="admin/agregarproducto.php" >Agregar</a>
 		<a id="modificar" href="admin/modificar.php">Modificar</a>
 		<a id="cerrar" href="./login/cerrar.php">Salir</a>

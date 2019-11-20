@@ -7,23 +7,35 @@
 	<script type="text/javascript"  href="./js/scripts.js"></script>
 </head>
 <body>
+	<section>
+	<form action="principal.php" method="post" >
+        <input type="submit" type="submit" value="REGRESAR"/>
+    </form>
 	<div class="container">
-	<img src="imagenes/Avatar.png"/>
+		<img src="imagenes/Avatar.png"/>
 		<form>
-		<div class="form-input">
-		<input type="text" name="text" placeholder="Nombre de usuario"/>	
-		</div>
-		<div class="form-input">
-		<input type="password" name="password" placeholder="Contraseña"/>
-		</div>
-		<input type="submit" type="submit" value="Entrar" class="btn-login"/>
-        <?php
-            if(isset($_GET['error'])){
-                echo '<br><br><span id="error">Nombre de usuario y/o contraseña incorrectos.</span>';
-            }
-        ?>
+			<div class="form-input">
+				<input type="text" name="text" placeholder="Usuario"/>	
+			</div>
+			<div class="form-input">
+				<input type="password" name="password" placeholder="Contraseña"/>
+			</div>
 		</form>
+		<br></br>
+		<form id="botones" method="post" action="./verificarCliente.php">
+			<input type="submit" type="submit" value="ENTRAR"/> 
+		</form>
+		<br></br>
+		<form id="formulario" method="post" action="./registrarse.php">
+			<input type="submit" id="registro" value="REGISTRARSE" class="registrarse">
+		</form>
+       <?php
+        if(isset($_GET['error'])){
+            echo '<br><br><span id="error">Nombre de usuario y/o contraseña incorrectos.</span>';
+        }
+        ?>
 	</div>
+	</section>
 </body>
 </html>
 

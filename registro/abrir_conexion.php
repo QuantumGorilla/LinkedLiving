@@ -6,7 +6,7 @@
 	$clavedb = "";    // sera el valor de nuestra BD 
 
 	//Lista de Tablas
-	$tabla_db1 = "cliente"; 	   // tabla de usuarios
+	$tabla_db1 = "usuarios"; 	   // tabla de usuarios
 	
 
 	error_reporting(1); //No me muestra errores

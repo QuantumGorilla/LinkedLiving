@@ -137,12 +137,7 @@ CREATE TABLE `universidades` (
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `usuarios` (
-  `Id` int(11) NOT NULL,
-  `Nombre` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `Usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `Contrasena` varchar(20) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+CREATE TABLE `linkedliving`.`usuarios` ( `ID` INT NOT NULL , `Nombre` VARCHAR NOT NULL , `Usuario` VARCHAR NOT NULL , `Contraseña` VARCHAR NOT NULL ) ENGINE = InnoDB;;
 
 -- --------------------------------------------------------
 
@@ -214,8 +209,7 @@ ALTER TABLE `universidades`
 --
 -- Indices de la tabla `usuarios`
 --
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`Id`);
+ALTER TABLE `usuarios` ADD PRIMARY KEY( `ID`);
 
 --
 -- Indices de la tabla `volantes`
