@@ -11,7 +11,7 @@
     <img src="imagenes/publi3.png" style="float: left"/>   
     <center>
     <h2> Perfiles </h2>
-    <form id="formulario" method="post" action="./admin.php">
+    <form id="formulario" method="post" action="./loginadmin.php">
     <input type="submit" type="submit" value="ADMINISTRADOR" class="admin"/>
     </form>
     <form id="formulario" method="post" action="./login.php">

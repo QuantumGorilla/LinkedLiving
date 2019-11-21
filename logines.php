@@ -13,7 +13,7 @@
     </form>
 	<div class="container">
 		<img src="imagenes/Avatar.png"/>
-		<h2 style="color:white">Estudiantes</h2>	
+		<h2 style="color:white">Administrador</h2>
 		<form>
 			<div class="form-input">
 				<input type="text" name="text" placeholder="Usuario"/>	
@@ -21,12 +21,12 @@
 			<div class="form-input">
 				<input type="password" name="password" placeholder="Contraseña"/>
 			</div>
-		<form id="botones" method="post" action="./verificarEstudiantes.php">
+		</form>
+		<form id="botones" method="post" action="./firstpage.php">
 			<input type="submit" type="submit" value="ENTRAR"/> 
-		</form> 
 		</form>
 		<br></br>
-		<form id="formulario" method="post" action="./registrarsee.php">
+        <form id="formulario" method="post" action="./registrarsee.php">
 			<input type="submit" id="registro" value="REGISTRARSE" class="registrarse">
 		</form>
        <?php
@@ -38,3 +38,4 @@
 	</section>
 </body>
 </html>
+

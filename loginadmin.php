@@ -22,7 +22,7 @@
 				<input type="password" name="password" placeholder="Contraseña"/>
 			</div>
 		</form>
-		<form id="botones" method="post" action="./verificarAdmin.php">
+		<form id="botones" method="post" action="./firstpage.php">
 			<input type="submit" type="submit" value="ENTRAR"/> 
 		</form>
 		<br></br>
